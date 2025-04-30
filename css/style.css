@@ -1,0 +1,412 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+body{
+    font-family: "Open Sans", sans-serif;
+}
+/* ----------------------------------------------------- Header ----------------------------------------------------- */
+header{
+    background-color: rgba(128, 128, 128, 0.1);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px;
+    
+}
+
+header h1 a{
+    color: black;
+}
+header ul {
+
+}
+.login-logout li, .logout-cart li{
+    display: inline-flex;
+    margin: 0px 8px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+
+}
+.logout-cart{
+    position: relative;
+    display: none;
+}
+.caret-down{
+    margin-left: -15px;
+}
+
+/* ----------------------------------------------------- selected products ----------------------------------------------------- */
+.selected-product{
+    position: absolute;
+    top: 40px;
+    right: 90px;
+    background-color: white;
+    width: 300px;
+    min-height: 500px;
+    z-index: 5;
+    /* ركز هنا */
+    display: none;
+    padding: 10px;
+}
+.selected-product span{
+    background-color: rgba(128, 128, 128, 0.1);
+    width: 250px;
+    padding: 5px;
+    border-radius: 5px;
+    
+}
+.selected-product i{
+    background-color: rgba(128, 128, 128, 0.1);
+    margin: 0px 4px;
+    padding: 5px;
+    border-radius: 5px;
+}
+.flex{
+    display: flex;
+    justify-content: space-evenly;
+    /* background-color: brown; */
+    border-radius: 5px;
+    padding: 10px;
+    margin: 5px 0px;
+}
+
+.view-all-products{
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 95px;
+    padding: 5px;
+    background-color: green;
+    border-radius: 5px;
+    cursor: pointer;
+    color: white;
+    /* margin: 15px 0px; */
+}
+/* .selected-product-title{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+} */
+
+/* ----------------------------------------------------- Section Search ----------------------------------------------------- */
+.section-search{
+    background-color: white;
+    padding: 25px;
+    text-align: center;
+}
+.section-search select, .section-search input{
+    width: 25%;
+    height: 30px;
+    outline: none;
+}
+
+/* ----------------------------------------------------- Products ----------------------------------------------------- */
+.products{
+    /* background-color: blueviolet; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+
+    width: 80%;
+    margin: 0px auto;
+    /* padding: 5px; */
+}
+.products .product{
+    background-color: rgba(128, 128, 128, 0.1);
+    border-radius: 8px;
+    /* width: calc(80% / 4);  */
+    width: 300px;
+    padding: 8px;
+    margin: 14px;
+    transform: translatey(0);
+    transition: ease 0.5s;
+
+}
+.products .product:hover{
+    transform: translatey(-2%);
+    border: 1px solid rgba(0, 0, 0, 0.548);
+    /* opacity: 0.9; */
+}
+.products .product img{
+    /* background-color: brown; */
+    width: 250px;
+    height: 275px;
+    display: block;
+    margin: 0px auto;
+    border-radius: 15px;
+
+}
+.products .product p{
+    /* font-size: 19px; */
+    padding: 1px;
+    font-weight: bold;
+}
+.products .product .btn-icon{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 25px 0px 0px 0px;
+}
+.products .product button{
+    background-color: green;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    border: 0;
+    padding: 10px 20px 10px 20px;
+    font-size: 12px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+.products .product i{
+    font-size: 25px;
+    cursor: pointer;
+    color: rgba(128, 128, 128, 0.781);
+}
+
+/* ----------------------------------------------------- Login | Register ----------------------------------------------------- */
+
+
+.section-form{
+    background-color: rgba(128, 128, 128, 0.1);
+    padding: 25px;
+    width: 60%;
+    margin: 50px auto;
+    border-radius: 10px;
+}
+.section-form h2{
+    padding: 10px;
+    margin-bottom: 25px;
+    font-size: 35px;
+}
+.user-name{
+    display: flex;
+}
+.user-name div{
+    width: 100%;
+}
+input[type="text"], input[type="email"], input[type="password"]{
+    width: 100%;
+    padding: 4px;
+    outline: 0;
+    border: 1px solid rgba(128, 128, 128, 0.479);
+}
+
+.last-name{
+    margin-left:10px;
+}
+.user-email, .user-password{
+    margin: 10px 0px;
+}
+input[type="submit"]{
+    padding: 10px;
+    margin: 10px 0px;
+    border: 0;
+    cursor: pointer;
+    background-color: blue;
+    border-radius: 10px;
+    color: white;
+}
+
+
+
+/* -------------------Cart Style---------------------- */
+.product-cart{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    /* width: 400px; */
+    gap: 25px;
+    padding: 18px;
+    background-color: rgba(128, 128, 128, 0.1);
+    border-radius: 10px;
+    margin-top: 25px;
+}
+.btn-icon-cart span{
+
+}
+.btn-icon-cart i{
+
+}
+.btn-icon-cart button{
+    background-color: red;
+    border: 0;
+    cursor: pointer;
+    padding: 10px;
+    padding: 8px;
+    border-radius: 8px;
+    margin-left: 90px;
+}
+
+
+/* Love */
+.favorites{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+   
+}
+.favorite-product{
+    border: 1px solid gainsboro;
+    border-radius: 10px;
+    padding: 15px;
+    margin: 10px;
+    width: 300px;
+}
+.favorite-product img{
+    display: block;
+    margin: 0px auto;
+    width: 100px;
+    height: 100px;
+    margin-bottom: 10px;
+}
+.category-heart{
+    display: flex;
+    justify-content: space-between;
+}
+.favorite-product i {
+    font-size: 25px;
+    color: red;
+    cursor: pointer;
+}
+ 
+
+/* Footer */
+
+
+.footer {
+  width: 75%;
+  margin: 0px auto;
+  border-radius: 6px;
+}
+
+.footer .footer-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 3.5rem;
+  padding: 60px;
+}
+
+.footer-row .footer-col h4 {
+    color: black;
+  font-size: 1.2rem;
+  font-weight: 400;
+}
+
+.footer-col .links {
+  margin-top: 20px;
+}
+
+.footer-col .links li {
+  list-style: none;
+  margin-bottom: 10px;
+}
+
+.footer-col .links li a {
+  text-decoration: none;
+  color: black;
+}
+
+.footer-col .links li a:hover {
+  color: #fff;
+}
+
+.footer-col p {
+  margin: 20px 0;
+  color: black;
+  max-width: 300px;
+}
+
+.footer-col form {
+  display: flex;
+  gap: 5px;
+}
+
+.footer-col input {
+  height: 40px;
+  border-radius: 6px;
+  background: none;
+  width: 100%;
+  outline: none;
+  border: 1px solid #7489C6 ;
+  caret-color: #fff;
+  color: black;
+  padding-left: 10px;
+}
+
+.footer-col input::placeholder {
+  color: #ccc;
+}
+
+ .footer-col form button {
+  background: #fff;
+  outline: none;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: 0.2s ease;
+}
+
+.footer-col form button:hover {
+  background: #cecccc;
+}
+
+.footer-col .icons {
+  display: flex;
+  margin-top: 30px;
+  gap: 30px;
+  cursor: pointer;
+}
+
+.footer-col .icons i {
+    color: black;
+}
+
+.footer-col .icons i:hover  {
+  color: #fff;
+}
+
+/* @media (max-width: 768px) {
+  .footer {
+    position: relative;
+    bottom: 0;
+    left: 0;
+    transform: none;
+    width: 100%;
+    border-radius: 0;
+  }
+
+  .footer .footer-row {
+    padding: 20px;
+    gap: 1rem;
+  }
+
+  .footer-col form {
+    display: block;
+  }
+
+  .footer-col form :where(input, button) {
+    width: 100%;
+  }
+
+  .footer-col form button {
+    margin: 10px 0 0 0;
+  }
+} */
+
+
+
+

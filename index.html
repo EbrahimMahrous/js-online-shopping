@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="css/all.css">
+    <!-- Css Style -->
+     <link rel="stylesheet" href="css/style.css">
+    <title>JS Proj</title>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <h1><a href="index.html">Online Shopping</a></h1>
+        <h3 class="header-user-name"></h3>
+        <ul class="login-logout">
+            <li class="login js-login"><a href="login.html">Login</a> </li>
+            <li class="register js-register"><a href="register.html">Register</a></li>
+        </ul>
+        
+        <ul class="logout-cart">
+            <span class="js-cart">
+            <li><i class="fa-solid fa-cart-shopping"></i><span class="js-counter">0</span> </li> 
+            <li class="">Cart</li>
+            <li><i class="fa-solid fa-caret-down caret-down"></i></li> 
+            <li class="logout-Link">LogOut</li>
+            </span>
+
+            <div class="selected-product">
+                <!-- <div class = 'flex'>
+                    <span> ${chossenItem.title} </span>     
+                    <i class="fa-solid fa-plus js-plus"></i>
+                    <i class="fa-solid fa-minus js-minus"></i> <br>
+                </div> -->
+                
+            <div class="view-products">
+                <a href="cartProducts.html" class="view-all-products">View all products</a>
+            </div>
+            
+            </div> <!-- /selected-product -->
+            
+        </ul>
+
+    </header>
+
+
+
+    <!-- <section>
+        <div class="section-search js-section-search">
+            <select name="" id="" title="Search about products">
+                <option value="">Search by name</option>
+                <option value="">Search by category</option>
+            </select>
+
+            <input type="search" title="Search ">
+        </div>
+    </section> -->
+    <section>
+        <div class="section-search js-section-search">
+            <select id="search-type" title="Search about products">
+                <option value="name">Search by name</option>
+                <option value="category">Search by category</option>
+            </select>
+    
+            <input type="search" id="search-input" title="Search ">
+        </div>
+    </section>
+
+    <!-- Home -->
+    <section>
+        <div class="products">
+            <div class="product">
+                <img src="img/1.png" alt="img-product" width="100px">
+                <p>T Shirt</p>
+                <p>80 $</p>
+                <p>Category: fashion</p>
+                <div class="btn-icon">
+                    <button>Add to cart</button>
+                    <i class="fa-solid fa-heart"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Footer -->
+     
+        <section class="footer">
+          <div class="footer-row">
+            <div class="footer-col">
+              <h4>Info</h4>
+              <ul class="links">
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Compressions</a></li>
+                <li><a href="#">Customers</a></li>
+                <li><a href="#">Service</a></li>
+                <li><a href="#">Collection</a></li>
+              </ul>
+            </div>
+    
+            <div class="footer-col">
+              <h4>Explore</h4>
+              <ul class="links">
+                <li><a href="#">Free Designs</a></li>
+                <li><a href="#">Latest Designs</a></li>
+                <li><a href="#">Themes</a></li>
+                <li><a href="#">Popular Designs</a></li>
+                <li><a href="#">Art Skills</a></li>
+                <li><a href="#">New Uploads</a></li>
+              </ul>
+            </div>
+    
+            <div class="footer-col">
+              <h4>Legal</h4>
+              <ul class="links">
+                <li><a href="#">Customer Agreement</a></li>
+                <li><a href="#">Privacy Policy</a></li>
+                <li><a href="#">GDPR</a></li>
+                <li><a href="#">Security</a></li>
+                <li><a href="#">Testimonials</a></li>
+                <li><a href="#">Media Kit</a></li>
+              </ul>
+            </div>
+    
+            <div class="footer-col">
+              <h4>Newsletter</h4>
+              <p>
+                Subscribe to our newsletter for a weekly dose
+                of news, updates, helpful tips, and
+                exclusive offers.
+              </p>
+              <form action="#">
+                <input type="text" placeholder="Your email" required>
+                <button type="submit">SUBSCRIBE</button>
+              </form>
+              <div class="icons">
+                <i class="fa-brands fa-facebook-f"></i>
+                <i class="fa-brands fa-twitter"></i>
+                <i class="fa-brands fa-linkedin"></i>
+                <i class="fa-brands fa-github"></i>
+              </div>
+            </div>
+          </div>
+        </section>
+
+    <!-- <script src="js/register.js"></script> -->
+    <!-- <script src="js/login.js"></script> -->
+    <script src="js/script.js"></script>
+    
+</body>
+</html>
